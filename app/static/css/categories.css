@@ -1,0 +1,28 @@
+.categories{
+    margin-left: 0%;
+}
+a, .category{
+    padding: 5%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 7%;
+    text-align: center;
+    font-size: 24px;
+    color: initial;
+}
+
+a:hover, .category:hover{
+    color: #5df212;
+}
+.category:visited{
+    color: inherit;
+}
+
+@media screen and (min-width: 600px){
+    .categories{
+        margin-left: 10%;
+    }
+    .catgory{
+        margin-bottom: 5%;
+    }
+}
