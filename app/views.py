@@ -5,4 +5,4 @@ app = Blueprint('app', __name__)
 
 @app.route('/')
 def check_view():
-    return render_template('base.html')
+    return render_template('home.html')

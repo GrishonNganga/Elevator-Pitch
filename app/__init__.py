@@ -12,8 +12,12 @@ def create_app(configuration):
     bootstrap.init_app(app)
     db.init_app(app)
     
+    from .auth.views import auth as auth_blueprint
     from .views import app as app_blueprint
     from .categories.views import category as category_blueprint
+
+    app.register_blueprint(auth_blueprint)
     app.register_blueprint(app_blueprint)
     app.register_blueprint(category_blueprint)
+    
     return app
