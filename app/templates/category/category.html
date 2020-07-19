@@ -2,12 +2,12 @@
 {% block styles %}
 {{ super() }}
 <link rel="stylesheet" href="{{url_for('static', filename='css/category.css')}}">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid">
     <div class="row pitches">
+        {% if pitches_count > 0 %}
         {% for pitch in pitches %}
         <div class="col-12 col-sm-4">
             <a href="{{url_for('pitch.show_pitch', id= pitch.id)}}">
@@ -18,30 +18,15 @@
             </a>
         </div>  
         {% endfor %}  
-        <div class="col-12 col-sm-4">
-            <a href="{{url_for('category.show_pitch',category = category, id= 1)}}">
-                <div class="pitch">
-                    This is a one minutu should probably listen to me. I hope I am doing an amazing job. Nice meeting you. Hope to meet you some other time.
-                    <p class="mt-2 pitch-writer">By Adam Newman</p>
-                </div>
-            </a>
-        </div>    
-        <div class="col-12 col-sm-4">
-            <a href="{{url_for('category.show_pitch',category = category, id= 1)}}">
-                <div class="pitch">
-                    This is a one minutu should probably listen to me. I hope I am doing an amazing job. Nice meeting you. Hope to meet you some other time.
-                    <p class="mt-2 pitch-writer">By Adam Newman</p>
-                </div>
-            </a>
-        </div>    
-        <div class="col-12 col-sm-4">
-            <a href="{{url_for('category.show_pitch',category = category, id= 1)}}">
-                <div class="pitch">
-                    This is a one minutu should probably listen to me. I hope I am doing an amazing job. Nice meeting you. Hope to meet you some other time.
-                    <p class="mt-2 pitch-writer">By Adam Newman</p>
-                </div>
-            </a>
-        </div>    
+        {% else %}
+        <div class="container">
+            <h1 class="text-title">Nothing here</h1>
+            <div class="nada-img">
+                <img src="{{url_for('static', filename = './images/nada.svg')}}" alt="">
+            </div>
+        </div>
+        {% endif %}
+        
     </div>
 
 </div>

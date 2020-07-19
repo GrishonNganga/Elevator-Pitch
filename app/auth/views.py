@@ -4,6 +4,7 @@ from flask_login import login_user, current_user, login_required, logout_user
 from .. import db
 from .forms import RegisterForm, LoginForm
 from app.models import User
+from ..emails import send_email
 
 auth = Blueprint('auth', __name__)
 
@@ -45,6 +46,11 @@ def register():
             db.session.add(new_user)
             db.session.commit()
 
+            # email_obj = {
+            #     'email_subject': 'Welcome to Elevator Pitch',
+            #     'email_body': f'We are glad you are here.{first} ',
+            # }
+            # send_email(email_obj, email)
             return redirect(url_for('auth.login'))
 
     return render_template('auth/register.html', register_form = form)

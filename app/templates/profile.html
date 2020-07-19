@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/profile.css')}}">
+{% endblock %}
+{% block content %}
+
+{% if user.is_authenticated%}
+
+<div class="container mt-3">
+    <div class="row mt-5">
+        <div class="col-sm-7 card">
+            <div class="row">
+                <div class="col">
+                    <span class="material-icons profile-img">account_circle</span>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col mt-4 text-title">
+                            {{user.f_name}} {{user.l_name}}
+                        </div>                        
+                    </div>
+                    <div class="row">
+                        <div class="col mt-3">
+                            {{ user.email }}
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <h2 class="mt-5">Your Pitches</h2>
+    {% if user.is_authenticated %}
+    <div class="row">
+        {% for pitch in pitches %}
+        <a href="{{url_for('pitch.show_pitch', id= pitch.id)}}">
+            <div class="col-sm-7 card mb-5">
+                {{pitch.message}}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="mt-5">
+        You do not have any pitches.
+    </div>
+    {% endif %}
+</div>
+{% else %}
+
+{% endif %}
+<div class="container">
+    
+<div class="row mt-5">
+    <div class="col-sm-7 card">
+        <div class="row">
+            <div class="col">
+                <span class="material-icons profile-img">account_circle</span>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col mt-4 text-title">
+                        Not logged in.
+                    </div>                        
+                </div>
+                <div class="row">
+                    <div class="col mt-3">
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

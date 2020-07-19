@@ -34,6 +34,16 @@ a:hover{
     position: absolute;
     bottom: 100%;
 }
+.nada-img img{
+    width: 60%;
+}
+.nada-img{
+    margin-left: 25%;
+}
+.text-title{
+    text-align: center;
+    margin-top: 50%;
+}
 
 @media screen and (min-width: 600px){
     .pitches{
@@ -52,5 +62,15 @@ a:hover{
         margin-right: 15%;
         text-align: center;
         position: relative; 
+    }
+    .nada-img img{
+        width: 45%;
+    }
+    .text-title{
+        text-align: center;
+        margin-top: 30%;
+    }
+    .nada-img{
+        margin-left: 35%;
     }
 }
