@@ -1,7 +1,7 @@
 .categories{
     margin-left: 0%;
 }
-a, .category{
+.category{
     padding: 5%;
     margin-top: 5%;
     margin-bottom: 2%;
@@ -11,12 +11,10 @@ a, .category{
     color: initial;
 }
 
-a:hover, .category:hover{
+.category a:hover{
     color: #5df212;
 }
-.category:visited{
-    color: inherit;
-}
+
 
 @media screen and (min-width: 600px){
     .categories{

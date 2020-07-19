@@ -4,17 +4,20 @@
 <link rel="stylesheet" href="{{url_for('static', filename='css/category.css')}}">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 {% endblock %}
+
 {% block content %}
 <div class="container-fluid">
     <div class="row pitches">
+        {% for pitch in pitches %}
         <div class="col-12 col-sm-4">
-            <a href="{{url_for('category.show_pitch',category = category, id= 1)}}">
+            <a href="{{url_for('pitch.show_pitch', id= pitch.id)}}">
                 <div class="pitch">
-                    This is a one minutu should probably listen to me. I hope I am doing an amazing job. Nice meeting you. Hope to meet you some other time.
-                    <p class="mt-2 pitch-writer">By Adam Newman</p>
+                    {{pitch.message}}
+                    <p class="mt-2 pitch-writer">{{ pitch.user.f_name }} {{ pitch.user.l_name }}</p>
                 </div>
             </a>
-        </div>    
+        </div>  
+        {% endfor %}  
         <div class="col-12 col-sm-4">
             <a href="{{url_for('category.show_pitch',category = category, id= 1)}}">
                 <div class="pitch">

@@ -16,7 +16,18 @@
 .thumbs{
     margin-left: 12%;
 }
-
+.pitch-up{
+    color: #5df212;
+}
+.pitch-down{
+    color: red;
+}
+.action-not-performed-error{
+    display: none;
+}
+.btn-remove-style:focus{
+    outline: none;
+}
 @media screen and (min-width: 500px){
     .pitch-owner{
         margin-left: 2%;

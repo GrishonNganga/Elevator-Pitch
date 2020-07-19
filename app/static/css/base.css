@@ -1,14 +1,78 @@
 body{
     font-size: 16px;
 }
-.nav img{
-    width: 50%;
-    margin-left: 22%;
+a{
+    color: initial;
+}
+a:hover{
+    color: #5df212;
+    text-decoration: none;
+}
+.join-btn{
+    background-color: #5df212;
+    color: white;
+    border-color: #5df212;
+    font-size: 16px;
+}
+.pitch-btn{
+    background-color: #5df212;
+    color: white;
+    border-color: #5df212;
+    font-size: 16px;
+
+}
+.logout-btn{
+    background-color: red;
+    color: white;
+    border-color: red;
+    font-size: 16px;
+}
+.nav-lg, .nav-sm{
+    width: 100%;
+}
+.nav-lg img, .nav-sm img{
+    width: 85%;
+    margin-top: 3%;
+    margin-left: 1%;
+}
+.menu-icon{
+    font-size: 36px;
+    position: fixed;
+    right: 0;
+    margin-right: 1%;
+    margin-top: 1%;
+    z-index: 5;
+}
+.nav-sm{
+    display: block;
+}
+.nav-lg{
+    display: none;
+}
+.hide-small-top{
+    margin-top: 15%;
+}
+.hide-small{
+    display: none;
+    margin-bottom: 15px;
+    text-align: center;
+    z-index: 5;
 }
 
 @media screen and (min-width: 600px){
-    .nav img{
-        width: 15%;
-        margin-left: 40%;
+    .nav-lg, .nav-sm img{
+        width: 24%;
+        margin-top: 1%;
     }
+    .menu-icon{
+        display: none;
+    }
+    .nav-lg{
+        display: flex;
+        width: 40%;
+    }
+    .nav-sm{
+        display: none;
+    }
+
 }

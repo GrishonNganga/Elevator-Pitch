@@ -7,8 +7,8 @@
 <div class="container">
     <div class="row categories">
         {% for category in categories %}
-        <div class="col-10 col-sm-4 card category">
-            <a href="{{url_for('category.show_category', category = category)}}">{{category}}</a>            
+        <div class="col-10 col-sm-5 card category">
+            <a href="{{url_for('category.show_category', category = category.name)}}">{{category.name}}</a>            
         </div>
         {% endfor %}
         

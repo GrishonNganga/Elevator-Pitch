@@ -3,8 +3,25 @@
 {{ super() }}
 <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
 {% endblock %}
+
 {% block content %}
 <div class="container">
-    <a href="/categories" class="btn btn-success view-categories">View Categories</a>
+    <div class="top-main row">
+        <div class="col-12 col-sm-7 top-main-img">
+            <img src="./static/images/elevator.jpg" alt="Elevator image">
+        </div>
+        <div class="col-12 col-sm-5 top-main-text">
+            If you had one shot to cease everything you ever wanted, would you <span class="text-capture">capture</span> it?
+        </div>
+    </div>
+    <div class="top-main row section-two">
+        <div class="col-12 col-sm-5 top-main-text section-two-text">
+            Bamboozle your way to her heart. <span class="material-icons heart">favorite</span>
+        </div>
+        <div class="col-12 col-sm-7 top-main-img">
+            <img src="./static/images/elevator1.jpg" alt="Elevator image">
+        </div>
+       
+    </div>
 </div>
 {% endblock %}
