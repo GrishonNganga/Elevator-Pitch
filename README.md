@@ -18,7 +18,8 @@ Members can view their profiles and see the pitches they themselves have contrib
 * Clone the repo `git clone https://github.com/GrishonNganga/Elevator-Pitch.git`
 * Move into the directory `cd Elevator-Pitch`
 * Create a virtual environment `python -m venv virtual`
-* Open `start.sh` file and replace what's inside the <> with your email address, password and a postgresql database created.
+* Open `start.sh` file and replace what's inside the <> with your email address, password and a `SQLALCHEMY_DATABASE_URI` from psql db created.\
+See more on how to construct `SQLALCHEMY_DATABASE_URI` here -> https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/#connection-uri-format
 * Run `python manage.py db init` to initialize a psql db.
 * Run `python manage.py db migrate` to make the psql database migrations.
 * Run `python manage.py db upgrade` to upgrade the psql db version to the latest with the migrated changes.
