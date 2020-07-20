@@ -20,5 +20,5 @@ class ProdConfig(Config):
 
 configuration_options ={
     'development': DevConfig,
-    'producrion': ProdConfig
+    'production': ProdConfig
 }
