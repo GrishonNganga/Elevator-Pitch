@@ -6,7 +6,7 @@ This site allows users to upload one minute pitches and view, upvote and downvot
 
 ## Description
 
-Members interact with other members by commenting, upvoting and downvoting other poeple one minute pitches. Conversations can be startes on other people's pitches' comment sections. 
+Members interact with other members by commenting, upvoting and downvoting other poeple's one minute pitches. Conversations can be started on other people's pitches' comment sections. 
 Members can view their profiles and see the pitches they themselves have contributed. 
 
 ## Setup/Installation Requirements
@@ -40,7 +40,7 @@ There are no known bugs atm. Get in touch if you discover any.
 Reach out to me over email grishon.nganga01@gmail.com
 ### MIT License
 
-Copyright (c) 2020 Spravy
+Copyright (c) 2020 Elevator Pitch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
