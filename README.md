@@ -8,13 +8,20 @@ This site allows users to upload one minute pitches and view, upvote and downvot
 
 Members interact with other members by commenting, upvoting and downvoting other poeple one minute pitches. Conversations can be startes on other people's pitches' comment sections. 
 Members can view their profiles and see the pitches they themselves have contributed. 
+
 ## Setup/Installation Requirements
 
-* Clone the repo `git clone https://github.com/GrishonNganga/Spravy.git`
-* Move into the directory `cd Spravy`
+### Requirements
+* Postgresql -> See https://www.postgresql.org/download/ to download for your platform of choice.
+
+### Setup
+* Clone the repo `git clone https://github.com/GrishonNganga/Elevator-Pitch.git`
+* Move into the directory `cd Elevator-Pitch`
 * Create a virtual environment `python -m venv virtual`
-* You need an API_KEY and SECRET_KEY to access the NEWSAPI.org's data. Create an account on their website if you do not have already.https://newsapi.org/register.
-* Open `start.sh` file and replace what's inside the <> with your api and secret keys. (API_KEY from newsapi.org)
+* Open `start.sh` file and replace what's inside the <> with your email address, password and a postgresql database created.
+* Run `python manage.py db init` to initialize a psql db.
+* Run `python manage.py db migrate` to make the psql database migrations.
+* Run `python manage.py db upgrade` to upgrade the psql db version to the latest with the migrated changes.
 * To run the application `./start.sh`
 ## Known Bugs
 
@@ -27,6 +34,7 @@ There are no known bugs atm. Get in touch if you discover any.
 * Python
 * Flask
 * Heroku
+* Postgresql
 ## Support and contact details
 
 Reach out to me over email grishon.nganga01@gmail.com
