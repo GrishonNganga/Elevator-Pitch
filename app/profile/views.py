@@ -13,6 +13,6 @@ def view_profile():
     pitches = None
     if current_user.is_authenticated:
         pitches = current_user.pitches
-        print(pitches)
+        pitches_count = len(pitches)
     
-    return render_template('profile.html', pitches = pitches)
+    return render_template('profile.html', pitches = pitches, pitches_count = pitches_count)

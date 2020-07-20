@@ -16,7 +16,7 @@ class DevConfig(Config):
    
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get("REMOTE_DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get('REMOTE_DATABASE_URL')
 
 configuration_options ={
     'development': DevConfig,

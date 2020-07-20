@@ -33,11 +33,8 @@
     {% endif %}
     {%if user.is_authenticated %}
     <div class="col">
-        <a href="{{url_for('pitch.make_pitch')}}" class="btn btn-success pitch-btn">Make A Pitch</a>
+        <a href="{{url_for('profile.view_profile')}}" class="btn btn-success pitch-btn">Profile</a>
     </div>
-    <!-- <div class="col">
-        <a href="{{url_for('auth.logout')}}" class="btn btn-danger logout-btn">Logout</a>
-    </div> -->
     {% endif %}
 </div>
 
@@ -52,7 +49,7 @@
         </a>
     </div>
     <div class="col hide-small-top hide-small">
-        <a href="{{url_for('pitch.show_pitches')}}">Pitchess</a>
+        <a href="{{url_for('pitch.show_pitches')}}">Pitches</a>
     </div>
     <div class="col hide-small">
         <a href="{{url_for('category.show_categories')}}">Categories</a>
@@ -64,7 +61,7 @@
     {% endif %}
     {%if user.is_authenticated %}
     <div class="col hide-small">
-        <a href="{{url_for('pitch.make_pitch')}}">Make A Pitch</a>
+        <a href="{{url_for('profile.view_profile')}}">Profile</a>
     </div>
     <div class="col hide-small">
         <a href="{{url_for('auth.logout')}}" class="btn btn-danger pitch-btn">Logout</a>

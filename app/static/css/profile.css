@@ -4,3 +4,22 @@
 .text-title{
     font-size: 24px;
 }
+
+.btn-success a, .btn-danger a{
+    color: white;
+}
+.btn-success, .btn-danger{
+    color: white;
+    font-size: 16px;
+}
+.pitch-link, .pitch-txt {
+    color: black;
+}
+
+.btn-success:hover, .btn-success:hover{
+    color: initial;
+}
+.btn-success{
+    background-color: #5df212;
+    border-color: #5df212;
+}
