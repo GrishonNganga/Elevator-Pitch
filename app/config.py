@@ -11,7 +11,7 @@ class Config:
     MAIL_DEFAULT_SENDER : os.environ.get('MAIL_USERNAME')
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://postgres:12345678@localhost/elevator_pitch'
+    SQLALCHEMY_DATABASE_URI= os.environ.get('DATABASE_URI')
     DEBUG=True
    
 
