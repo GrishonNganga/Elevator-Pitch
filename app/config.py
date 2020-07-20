@@ -1,8 +1,8 @@
 import os
 class Config:
     SECRET_KEY='thisismysupersecretkey'
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    MAIL_SERVER : 'smtp.googlemail.com'
+    
+     MAIL_SERVER : 'smtp.googlemail.com'
     MAIL_PORT : 465
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
@@ -11,14 +11,14 @@ class Config:
     MAIL_DEFAULT_SENDER : os.environ.get('MAIL_USERNAME')
 
 class DevConfig(Config):
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://postgres:12345678@localhost/elevator_pitch'
     DEBUG=True
-
+   
 
 class ProdConfig(Config):
-    DEBUG=False
-    
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 configuration_options ={
     'development': DevConfig,
-    'production': ProdConfig
+    'producrion': ProdConfig
 }
